@@ -8,15 +8,19 @@ int main() {
 	std::cout << "Input number : ";
 	std::cin >> number;
 
-	for (int i = 2; i < number; i++) {
-		if (number % i == 0) {
-			//count++; // count = count + 1;
-			isPrime = false; // remove add operation
-			break;
-		}
-		std::cout << i << " ";
+	if (number < 2) {
+		isPrime = false;
 	}
-
+	else {
+		for (int i = 2; i < number; i++) {
+			if (number % i == 0) {
+				//count++; // count = count + 1;
+				isPrime = false; // remove add operation
+					break; // The loop terminates as soon as divisor is found
+			}
+			std::cout << i << " ";
+		}
+	}
 	//if (count == 0)
 	// (isPrime != 0)
 	if (isPrime) // remove comparison operator
