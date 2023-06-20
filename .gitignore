@@ -11,9 +11,10 @@
 *.pdb
 *.vcxproj.FileListAbsolute.txt
 *.idb
+*.ipch
 *.VC.db
 *.suo
-*.ipch
+*.lock
 
 # Prerequisites
 *.d
