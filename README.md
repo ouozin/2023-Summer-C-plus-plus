@@ -1,1 +1,1 @@
-# work_cpp
+# This repository contains practical ~~

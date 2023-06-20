@@ -1,3 +1,20 @@
+# vs2022
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.tlog
+*.lastbuildstate
+*.exe.recipe
+*.ilk
+*.log
+*.pdb
+*.vcxproj.FileListAbsolute.txt
+*.idb
+*.VC.db
+*.suo
+*.ipch
+
 # Prerequisites
 *.d
 
