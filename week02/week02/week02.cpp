@@ -1,31 +1,39 @@
 ﻿#include <iostream>
 
-int main() {
-	int number = 0;
-	//int count = 0;
-	bool isPrime = true; // memory+, readability
-
-	std::cout << "Input number : ";
-	std::cin >> number;
-
-	if (number < 2) {
-		isPrime = false;
+bool isPrime(int n) { // pass by value
+	if (n < 2) {
+		return false;
 	}
 	else {
-		for (int i = 2; i < number; i++) {
-			if (number % i == 0) {
-				//count++; // count = count + 1;
-				isPrime = false; // remove add operation
-					break; // The loop terminates as soon as divisor is found
+		for (int i = 2; i < n; i++) {
+			if (n % i == 0) {
+				//isPrime = false;
+				//break;
+				return false;
 			}
-			std::cout << i << " ";
 		}
 	}
-	//if (count == 0)
-	// (isPrime != 0)
-	if (isPrime) // remove comparison operator
-		std::cout << number << " is prime number~\n";
-	else
-		std::cout << number << " is NOT prime number!\n";
+	return true;
+}
+
+int main() {
+	int n1 = 0, n2 = 0;
+
+	std::cout << "Input number #1: ";
+	std::cin >> n1;
+
+	std::cout << "Input number #2: ";
+	std::cin >> n2;
+	
+	if (n1 > n2) {
+		int temp = n1;
+		n1 = n2;
+		n2 = temp;
+	}
+
+	for (int i = n1; i <= n2; i++) {
+		if (isPrime(i))
+			std::cout << i << " ";
+	}
 	return 0;
 }
