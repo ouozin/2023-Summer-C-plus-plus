@@ -9,11 +9,11 @@ private:
 	static int count;
 public:
 	Student() {
-		cout << "default constructor!\n";
+		cout << this << "default constructor!\n";
 		count++;
 	}
 	~Student() {
-		cout << "destructor activated..RIP!\n";
+		cout << this << "destructor activated..RIP!\n";
 		count--;
 	}
 	static int getCount() { // inline
@@ -32,7 +32,9 @@ int Student::count = 0; // initialize
 
 int main() {
 	Student s1;
+	Student s2;
 	cout << s1.getCount() << '\n';
+	cout << s2.getCount() << '\n';
 	cout << Student::getCount() << '\n';
 	test();
 	cout << Student::getCount() << '\n'; // 3, ???
